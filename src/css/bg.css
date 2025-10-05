@@ -1,0 +1,56 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #1e3c72;
+}
+
+.bg-element {
+    animation: electric-wave 8s ease-in-out infinite alternate;
+    background-image: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #ffa500 100%);
+    bottom: -50%;
+    left: -50%;
+    opacity: .4;
+    position: fixed;
+    right: -50%;
+    top: -50%;
+    z-index: -1;
+    border-radius: 60% 40% 70% 30%/60% 30% 70% 40%;
+    filter: blur(50px);
+}
+
+.bg-element2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 10s;
+    background-image: linear-gradient(45deg, #ffa500 0%, #1e3c72 50%, #2a5298 100%);
+    opacity: .3;
+    border-radius: 40% 60% 30% 70%/40% 70% 30% 60%;
+    filter: blur(60px);
+}
+
+.bg-element3 {
+    animation-duration: 12s;
+    background-image: linear-gradient(90deg, #2a5298 0%, #1e3c72 70%, #ffa500 100%);
+    opacity: .2;
+    border-radius: 70% 30% 60% 40%/70% 40% 60% 30%;
+    filter: blur(70px);
+}
+
+@keyframes electric-wave {
+    0% {
+        transform: translate(-20%, -20%) rotate(0deg) scale(1);
+        border-radius: 60% 40% 70% 30%/60% 30% 70% 40%;
+    }
+
+    50% {
+        transform: translate(20%, 20%) rotate(10deg) scale(1.05);
+        border-radius: 40% 60% 30% 70%/40% 70% 30% 60%;
+    }
+
+    100% {
+        transform: translate(-20%, -20%) rotate(0deg) scale(1);
+        border-radius: 60% 40% 70% 30%/60% 30% 70% 40%;
+    }
+}
